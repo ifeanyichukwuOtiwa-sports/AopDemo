@@ -9,9 +9,13 @@ name: Java CI with Gradle
 
 on:
   push:
+    types: [opened, synchronize, reopened]
     branches: [ "develop" ]
   pull_request:
-    branches: [ "develop" ]
+    types: [opened, synchronize, reopened]
+    branches:
+      - develop
+      - release/*
 
 permissions:
   contents: read
