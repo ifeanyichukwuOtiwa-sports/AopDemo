@@ -10,7 +10,10 @@ name: Java CI with Gradle
 on:
   push:
     types: [opened, synchronize, reopened]
-    branches: [ "develop" ]
+    branches:
+      - develop
+      - release/*
+      
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
